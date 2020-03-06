@@ -18,9 +18,9 @@
 
 We recommend you use a virtual environment to install dependencies for this site.
 
-[To install virtualenv](https://virtualenv.pypa.io/en/stable/installation/)
+[To install virtualenv](https://virtualenv.pypa.io/en/latest/installation.html)
 
-[To create a virtualenv](https://virtualenv.pypa.io/en/stable/reference/#virtualenv-command)
+[To create a virtualenv](https://virtualenv.pypa.io/en/latest/user_guide.html)
 
 To activate virtualenv in a Unix-based system:
 
