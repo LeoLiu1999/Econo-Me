@@ -35,8 +35,9 @@ With an activated virtualenv:
 ### 3. Launch
 
 In the repository for this site:
+'cd econome'
 
-`python econome/__init__.py`
+`python __init__.py`
 
 In a browser, navigate to:
 
