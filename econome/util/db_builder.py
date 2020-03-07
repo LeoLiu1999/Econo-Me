@@ -47,5 +47,5 @@ def create_lobbies():
 if __name__ == "__main__":
     f = "../data/db.db"
     create_db()
-    add_user("leo", "wat")
-    auth_user("leo", "wat")
+    #add_user("leo", "wat")
+    #auth_user("leo", "wat")
