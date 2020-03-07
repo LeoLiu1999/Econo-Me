@@ -3,8 +3,6 @@ import csv       #facilitates CSV I/O
 from hashlib import sha256
 f="data/db.db"
 
-
-
 def create_db():
     db = sqlite3.connect(f)
     c = db.cursor()
@@ -36,13 +34,6 @@ def auth_user(username, password): #note: this does not differentiate between wr
     command = "SELECT password FROM users WHERE username = \'" + username + "\'"
     actual_password = c.execute(command).fetchone()[0]
     return (entered_password == actual_password)
-
-
-def create_lobbies():
-    db = sqlite3.connect(f)
-    c = db.cursor()
-    command = "CREATE TABLE IF NOT EXISTS games(id INTEGER, round TEXT, drawing TEXT)"
-    c.execute(command)
 
 if __name__ == "__main__":
     f = "../data/db.db"
