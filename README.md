@@ -35,7 +35,8 @@ With an activated virtualenv:
 ### 3. Launch
 
 In the repository for this site:
-'cd econome'
+
+`cd econome`
 
 `python __init__.py`
 
