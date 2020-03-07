@@ -15,7 +15,7 @@ def add_user(username, password):
     command = "SELECT username FROM users WHERE username = \'" + username + "\'" #checks if username already exists
     result = c.execute(command)
     if result.fetchone() == None:
-        encrypt = sha256(password).hexdigest() #encrypt password
+        encrypt = sha256(password.encode('utf-8')).hexdigest() #encrypt password
 
         command = "INSERT INTO users VALUES('" + username + "','" + encrypt + "')"
         c.execute(command)
@@ -30,7 +30,7 @@ def add_user(username, password):
 def auth_user(username, password): #note: this does not differentiate between wrong password and non-existing username
     db = sqlite3.connect(f)
     c = db.cursor()
-    entered_password = sha256(password).hexdigest()
+    entered_password = sha256(password.encode('utf-8')).hexdigest()
     command = "SELECT password FROM users WHERE username = \'" + username + "\'"
     actual_password = c.execute(command).fetchone()[0]
     return (entered_password == actual_password)
