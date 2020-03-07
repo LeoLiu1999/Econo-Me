@@ -69,6 +69,12 @@ def create():
 
     return render_template("create.html", code_num = code)
 
+@app.route("/logout")
+def logout():
+	if "user" in session:
+		session.pop("user")
+	return redirect("/")
+
 if __name__ == "__main__":
     app.debug = True
     app.run()
